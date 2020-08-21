@@ -1,0 +1,9 @@
+{
+  "plugins": ["cypress"],
+  "env": {
+    "browser": true,
+    "cypress/globals": true
+  },
+  "rules": {}
+}
+

@@ -1,0 +1,176 @@
+@import '../sizes.css';
+
+.loading {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.album {
+  margin: 1.25rem;
+}
+
+.goBack {
+  border: 0 none;
+  color: #336699;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+.goBack:before {
+  content: '\00ab';
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.artists {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.content img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5rem auto 3rem;
+  width: 10.9375rem;
+}
+
+.reviewList {
+  margin: 0 auto 3rem;
+  text-align: left;
+  width: 20rem;
+}
+
+.reviewList h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.reviewList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.review {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.125rem;
+  justify-content: space-between;
+}
+
+.review span {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+
+.review span:before {
+  content: '\2605';
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+.removeReview {
+  background: none transparent;
+  border: 0 none;
+  color: #cc0000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.review + .review {
+  --spacing: 0.9375rem;
+
+  border-top: 1px solid #ccc;
+  margin-top: var(--spacing);
+  padding-top: var(--spacing);
+}
+
+.newReview textarea {
+  display: block;
+  font-size: 1.25rem;
+  height: 6.25rem;
+  margin: 0 auto 2rem;
+  width: 20rem;
+}
+
+.newReview button {
+  background: #369;
+  border-radius: 0.25rem;
+  border: 0 none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.625rem 1rem;
+}
+
+.newReview button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+@media(--desktop) {
+  .album {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .content {
+    display: grid;
+    grid-column-gap: 3.75rem;
+    grid-template-areas: 'title   title'
+                         'artists artists'
+                         'info    reviews';
+    grid-template-columns: 20rem 1fr;
+    text-align: left;
+  }
+
+  .title {
+    grid-area: title;
+  }
+
+  .artists {
+    grid-area: artists;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .ratings {
+    margin-bottom: 0;
+  }
+
+  .reviews {
+    grid-area: reviews;
+    max-width: 62.5rem;
+  }
+
+  .reviewList {
+    width: auto;
+  }
+
+  .newReview textarea {
+    font-size: 1.25rem;
+    width: 100%;
+  }
+}

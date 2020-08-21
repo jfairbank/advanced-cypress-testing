@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "API_PORT": 4000,
+    "API_HOST": "localhost",
+    "USER_EMAIL": "ebrown@jigowatts.com",
+    "USER_PASSWORD": "GreatScott!",
+    "USER_NAME": "Emmett Brown"
+  }
+}
